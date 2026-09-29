@@ -3,12 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
+    <title>Internet Speed Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <h1>Internet Speed Converter</h1>
+        <p>Convert between Mbps, MBps, Gbps and more.</p>
+    </header>
 
-    <h1>This is a Main Heading</h1>
-    <p>This is a paragraph of visible text.</p>
+    <main>
+        <section class="converter-card">
+            <h2>Speed Converter</h2>
+            <div class="input-group">
+                <label for="fromValue">From</label>
+                <div class="conversion-row">
+                    <input
+                        type="number"
+                        id="fromValue"
+                        placeholder="Enter value"
+                    >
+                    <select id="fromUnit">
+                        <option value="Mbps">Mbps</option>
+                        <option value="MBps">MBps</option>
+                        <option value="Gbps">Gbps</option>
+                        <option value="GBps">GBps</option>
+                        <option value="Kbps">Kbps</option>
+                        <option value="KBps">KBps</option>
+                    </select>
+                </div>
+            </div>
 
+            <div class="arrow">
+                ↓
+            </div>
+            <div class="input-group">
+                <label for="toUnit">Convert To</label>
+                <select id="toUnit">
+                    <option value="Mbps">Mbps</option>
+                    <option value="MBps">MBps</option>
+                    <option value="Gbps">Gbps</option>
+                    <option value="GBps">GBps</option>
+                    <option value="Kbps">Kbps</option>
+                    <option value="KBps">KBps</option>
+                </select>
+            </div>
+            <div class="result">
+                <p>Result</p>
+                <h2 id="resultValue">800 Mbps</h2>
+            </div>
+        </section>
+        <section class="info-card">
+            <h2>Understanding Internet Speed</h2>
+            <p>
+                Internet speeds are commonly displayed using
+                megabits per second (Mbps), while file transfer
+                speeds are often displayed using megabytes per
+                second (MBps).
+            </p>
+            <div class="conversion-info">
+                <div>
+                    <strong>1 Byte</strong>
+                    <span>= 8 Bits</span>
+                </div>
+
+                <div>
+                    <strong>1 MBps</strong>
+                    <span>= 8 Mbps</span>
+                </div>
+
+                <div>
+                    <strong>1 GBps</strong>
+                    <span>= 8 Gbps</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Internet Speed Converter</p>
+        <p class="disclaimer">
+            This project was built for educational purposes only.
+            Results are theoretical conversions and may not reflect real-world internet speeds.
+        </p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
